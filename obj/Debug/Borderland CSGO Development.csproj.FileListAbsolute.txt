@@ -1,0 +1,19 @@
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.exe.config
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.exe
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.pdb
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.csprojResolveAssemblyReference.cache
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland_CSGO_Development.Properties.Resources.resources
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.csproj.GenerateResource.Cache
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.csproj.CoreCompileInputs.cache
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.exe
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.pdb
+C:\Users\Dias\source\repos\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland_CSGO_Development.Main.resources
+E:\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.exe.config
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.exe
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.pdb
+E:\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.exe
+E:\Borderland CSGO Development\Borderland CSGO Development\bin\Debug\Borderland CSGO Development.pdb
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.csprojResolveAssemblyReference.cache
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland_CSGO_Development.Main.resources
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland_CSGO_Development.Properties.Resources.resources
+E:\Borderland CSGO Development\Borderland CSGO Development\obj\Debug\Borderland CSGO Development.csproj.GenerateResource.Cache

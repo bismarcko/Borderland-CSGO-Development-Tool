@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Borderland" Class="BorderlandDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=213.136.79.68;Initial Catalog=Borderland;Persist Security Info=True;User ID=borderland" SettingsObjectName="Borderland_CSGO_Development.Properties.Settings" SettingsPropertyName="BorderlandConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Patch" Member="Patches">
+    <Type Name="Patch">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PATCHNAME" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHDATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHINFO" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PATCHINFO_FULL" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="LINK" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="PatchType_Patch" Member="PatchType1" ThisKey="PATCHTYPE" OtherKey="ID" Type="PatchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatchType" Member="PatchTypes">
+    <Type Name="PatchType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPENAME" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Association Name="PatchType_Patch" Member="Patches" ThisKey="ID" OtherKey="PATCHTYPE" Type="Patch" />
+    </Type>
+  </Table>
+</Database>
