@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Borderland" Class="BorderlandDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=213.136.79.68;Initial Catalog=Borderland;Persist Security Info=True;User ID=borderland" SettingsObjectName="Borderland_CSGO_Development.Properties.Settings" SettingsPropertyName="BorderlandConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Patch" Member="Patches">
+    <Type Name="Patch">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PATCHNAME" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHDATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="PATCHINFO" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PATCHINFO_FULL" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="LINK" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Association Name="PatchType_Patch" Member="PatchType1" ThisKey="PATCHTYPE" OtherKey="ID" Type="PatchType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PatchType" Member="PatchTypes">
+    <Type Name="PatchType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPENAME" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Association Name="PatchType_Patch" Member="Patches" ThisKey="ID" OtherKey="PATCHTYPE" Type="Patch" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BugType" Member="BugTypes">
+    <Type Name="BugType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPENAME" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="BugType_Bug" Member="Bugs" ThisKey="ID" OtherKey="BUGTYPE" Type="Bug" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bug" Member="Bugs">
+    <Type Name="Bug">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUGNAME" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="BUGTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BUGDATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GAMEVER" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="BUGINFO" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="BUGINFO_FULL" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="BUGFIXED" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BugType_Bug" Member="BugType1" ThisKey="BUGTYPE" OtherKey="ID" Type="BugType" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
