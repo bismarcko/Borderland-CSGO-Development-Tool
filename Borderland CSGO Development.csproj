@@ -8,9 +8,16 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Borderland_CSGO_Development</RootNamespace>
     <AssemblyName>Borderland CSGO Development</AssemblyName>
+<<<<<<< HEAD
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+=======
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +38,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+<<<<<<< HEAD
+=======
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +64,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Borderland.dbml</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="BugSubmit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugSubmit.Designer.cs">
+      <DependentUpon>BugSubmit.cs</DependentUpon>
+    </Compile>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +84,12 @@
     <None Include="Borderland.dbml.layout">
       <DependentUpon>Borderland.dbml</DependentUpon>
     </None>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="BugSubmit.resx">
+      <DependentUpon>BugSubmit.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -73,6 +101,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+<<<<<<< HEAD
+=======
+      <DesignTime>True</DesignTime>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     </Compile>
     <None Include="Borderland.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -95,5 +127,13 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\Bismarck-Night_Attack.wav" />
+    <None Include="Resources\konachan-com-188033-bismarck_kancolle-blonde_hair-blue_eyes-kantai_collection-tagme.jpg" />
+  </ItemGroup>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

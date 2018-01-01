@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using System.Reflection;
+=======
+﻿using System.Resources;
+using System.Reflection;
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -6,11 +11,19 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Borderland CSGO Development")]
+<<<<<<< HEAD
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Borderland CSGO Development")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
+=======
+[assembly: AssemblyDescription("Development tool for staffs only")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Borderland")]
+[assembly: AssemblyProduct("Borderland CSGO Development")]
+[assembly: AssemblyCopyright("Copyright © Borderland 2017")]
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,3 +47,8 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+<<<<<<< HEAD
+=======
+[assembly: NeutralResourcesLanguage("en-US")]
+
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936

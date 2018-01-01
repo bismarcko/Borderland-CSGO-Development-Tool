@@ -19,4 +19,27 @@
       <Association Name="PatchType_Patch" Member="Patches" ThisKey="ID" OtherKey="PATCHTYPE" Type="Patch" />
     </Type>
   </Table>
+<<<<<<< HEAD
+=======
+  <Table Name="dbo.BugType" Member="BugTypes">
+    <Type Name="BugType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TYPENAME" Type="System.String" DbType="NVarChar(32) NOT NULL" CanBeNull="false" />
+      <Association Name="BugType_Bug" Member="Bugs" ThisKey="ID" OtherKey="BUGTYPE" Type="Bug" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bug" Member="Bugs">
+    <Type Name="Bug">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUGNAME" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="BUGTYPE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BUGDATE" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GAMEVER" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="BUGINFO" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="BUGINFO_FULL" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="BUGFIXED" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BugType_Bug" Member="BugType1" ThisKey="BUGTYPE" OtherKey="ID" Type="BugType" IsForeignKey="true" />
+    </Type>
+  </Table>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
 </Database>

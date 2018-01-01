@@ -8,10 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 namespace Borderland_CSGO_Development.Properties
 {
 
 
+=======
+namespace Borderland_CSGO_Development.Properties {
+    using System;
+    
+    
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,6 +26,7 @@ namespace Borderland_CSGO_Development.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
+<<<<<<< HEAD
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -34,28 +42,54 @@ namespace Borderland_CSGO_Development.Properties
         {
         }
 
+=======
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         internal static global::System.Resources.ResourceManager ResourceManager
         {
             get
             {
                 if ((resourceMan == null))
                 {
+=======
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Borderland_CSGO_Development.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
         internal static global::System.Globalization.CultureInfo Culture
         {
             get
@@ -67,5 +101,35 @@ namespace Borderland_CSGO_Development.Properties
                 resourceCulture = value;
             }
         }
+=======
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Bismarck_Night_Attack {
+            get {
+                return ResourceManager.GetStream("Bismarck_Night_Attack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap konachan_com_188033_bismarck_kancolle_blonde_hair_blue_eyes_kantai_collection_tagme {
+            get {
+                object obj = ResourceManager.GetObject("konachan-com-188033-bismarck_kancolle-blonde_hair-blue_eyes-kantai_collection-tag" +
+                        "me", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     }
 }

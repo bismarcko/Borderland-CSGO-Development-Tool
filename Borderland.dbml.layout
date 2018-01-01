@@ -21,5 +21,27 @@
         <classShapeMoniker Id="dd52fe29-89d5-45f5-b4be-20a9bdf16e3e" />
       </nodes>
     </associationConnector>
+<<<<<<< HEAD
+=======
+    <classShape Id="2ea0b2c0-3afe-40d8-ba70-dcc7f7f5c32c" absoluteBounds="0.75, 5.5, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/BorderlandDataContext/BugType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5139e241-dfce-4533-8de6-b15505f95742" absoluteBounds="0.765, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7a4c40c-5889-4c77-a964-1945271341f2" absoluteBounds="3.5, 5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/BorderlandDataContext/Bug" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4099a5de-8901-4324-8363-e0cc396f798d" absoluteBounds="3.515, 5.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.09699625651042); (3.5 : 6.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BorderlandDataContext/BugType/BugType_Bug" />
+      <nodes>
+        <classShapeMoniker Id="2ea0b2c0-3afe-40d8-ba70-dcc7f7f5c32c" />
+        <classShapeMoniker Id="d7a4c40c-5889-4c77-a964-1945271341f2" />
+      </nodes>
+    </associationConnector>
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

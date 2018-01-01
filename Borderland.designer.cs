@@ -36,6 +36,15 @@ namespace Borderland_CSGO_Development
     partial void InsertPatchType(PatchType instance);
     partial void UpdatePatchType(PatchType instance);
     partial void DeletePatchType(PatchType instance);
+<<<<<<< HEAD
+=======
+    partial void InsertBugType(BugType instance);
+    partial void UpdateBugType(BugType instance);
+    partial void DeleteBugType(BugType instance);
+    partial void InsertBug(Bug instance);
+    partial void UpdateBug(Bug instance);
+    partial void DeleteBug(Bug instance);
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
     #endregion
 		
 		public BorderlandDataContext() : 
@@ -83,6 +92,25 @@ namespace Borderland_CSGO_Development
 				return this.GetTable<PatchType>();
 			}
 		}
+<<<<<<< HEAD
+=======
+		
+		public System.Data.Linq.Table<BugType> BugTypes
+		{
+			get
+			{
+				return this.GetTable<BugType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Bug> Bugs
+		{
+			get
+			{
+				return this.GetTable<Bug>();
+			}
+		}
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Patch")]
@@ -445,5 +473,393 @@ namespace Borderland_CSGO_Development
 			entity.PatchType1 = null;
 		}
 	}
+<<<<<<< HEAD
+=======
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BugType")]
+	public partial class BugType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _TYPENAME;
+		
+		private EntitySet<Bug> _Bugs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnTYPENAMEChanging(string value);
+    partial void OnTYPENAMEChanged();
+    #endregion
+		
+		public BugType()
+		{
+			this._Bugs = new EntitySet<Bug>(new Action<Bug>(this.attach_Bugs), new Action<Bug>(this.detach_Bugs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TYPENAME", DbType="NVarChar(32) NOT NULL", CanBeNull=false)]
+		public string TYPENAME
+		{
+			get
+			{
+				return this._TYPENAME;
+			}
+			set
+			{
+				if ((this._TYPENAME != value))
+				{
+					this.OnTYPENAMEChanging(value);
+					this.SendPropertyChanging();
+					this._TYPENAME = value;
+					this.SendPropertyChanged("TYPENAME");
+					this.OnTYPENAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BugType_Bug", Storage="_Bugs", ThisKey="ID", OtherKey="BUGTYPE")]
+		public EntitySet<Bug> Bugs
+		{
+			get
+			{
+				return this._Bugs;
+			}
+			set
+			{
+				this._Bugs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Bugs(Bug entity)
+		{
+			this.SendPropertyChanging();
+			entity.BugType1 = this;
+		}
+		
+		private void detach_Bugs(Bug entity)
+		{
+			this.SendPropertyChanging();
+			entity.BugType1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Bug")]
+	public partial class Bug : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _BUGNAME;
+		
+		private int _BUGTYPE;
+		
+		private System.DateTime _BUGDATE;
+		
+		private string _GAMEVER;
+		
+		private string _BUGINFO;
+		
+		private string _BUGINFO_FULL;
+		
+		private System.Nullable<bool> _BUGFIXED;
+		
+		private EntityRef<BugType> _BugType1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnBUGNAMEChanging(string value);
+    partial void OnBUGNAMEChanged();
+    partial void OnBUGTYPEChanging(int value);
+    partial void OnBUGTYPEChanged();
+    partial void OnBUGDATEChanging(System.DateTime value);
+    partial void OnBUGDATEChanged();
+    partial void OnGAMEVERChanging(string value);
+    partial void OnGAMEVERChanged();
+    partial void OnBUGINFOChanging(string value);
+    partial void OnBUGINFOChanged();
+    partial void OnBUGINFO_FULLChanging(string value);
+    partial void OnBUGINFO_FULLChanged();
+    partial void OnBUGFIXEDChanging(System.Nullable<bool> value);
+    partial void OnBUGFIXEDChanged();
+    #endregion
+		
+		public Bug()
+		{
+			this._BugType1 = default(EntityRef<BugType>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGNAME", DbType="NVarChar(64) NOT NULL", CanBeNull=false)]
+		public string BUGNAME
+		{
+			get
+			{
+				return this._BUGNAME;
+			}
+			set
+			{
+				if ((this._BUGNAME != value))
+				{
+					this.OnBUGNAMEChanging(value);
+					this.SendPropertyChanging();
+					this._BUGNAME = value;
+					this.SendPropertyChanged("BUGNAME");
+					this.OnBUGNAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGTYPE", DbType="Int NOT NULL")]
+		public int BUGTYPE
+		{
+			get
+			{
+				return this._BUGTYPE;
+			}
+			set
+			{
+				if ((this._BUGTYPE != value))
+				{
+					if (this._BugType1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBUGTYPEChanging(value);
+					this.SendPropertyChanging();
+					this._BUGTYPE = value;
+					this.SendPropertyChanged("BUGTYPE");
+					this.OnBUGTYPEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGDATE", DbType="Date NOT NULL")]
+		public System.DateTime BUGDATE
+		{
+			get
+			{
+				return this._BUGDATE;
+			}
+			set
+			{
+				if ((this._BUGDATE != value))
+				{
+					this.OnBUGDATEChanging(value);
+					this.SendPropertyChanging();
+					this._BUGDATE = value;
+					this.SendPropertyChanged("BUGDATE");
+					this.OnBUGDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GAMEVER", DbType="NVarChar(16) NOT NULL", CanBeNull=false)]
+		public string GAMEVER
+		{
+			get
+			{
+				return this._GAMEVER;
+			}
+			set
+			{
+				if ((this._GAMEVER != value))
+				{
+					this.OnGAMEVERChanging(value);
+					this.SendPropertyChanging();
+					this._GAMEVER = value;
+					this.SendPropertyChanged("GAMEVER");
+					this.OnGAMEVERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGINFO", DbType="NVarChar(128)")]
+		public string BUGINFO
+		{
+			get
+			{
+				return this._BUGINFO;
+			}
+			set
+			{
+				if ((this._BUGINFO != value))
+				{
+					this.OnBUGINFOChanging(value);
+					this.SendPropertyChanging();
+					this._BUGINFO = value;
+					this.SendPropertyChanged("BUGINFO");
+					this.OnBUGINFOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGINFO_FULL", DbType="NVarChar(2048)")]
+		public string BUGINFO_FULL
+		{
+			get
+			{
+				return this._BUGINFO_FULL;
+			}
+			set
+			{
+				if ((this._BUGINFO_FULL != value))
+				{
+					this.OnBUGINFO_FULLChanging(value);
+					this.SendPropertyChanging();
+					this._BUGINFO_FULL = value;
+					this.SendPropertyChanged("BUGINFO_FULL");
+					this.OnBUGINFO_FULLChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUGFIXED", DbType="Bit")]
+		public System.Nullable<bool> BUGFIXED
+		{
+			get
+			{
+				return this._BUGFIXED;
+			}
+			set
+			{
+				if ((this._BUGFIXED != value))
+				{
+					this.OnBUGFIXEDChanging(value);
+					this.SendPropertyChanging();
+					this._BUGFIXED = value;
+					this.SendPropertyChanged("BUGFIXED");
+					this.OnBUGFIXEDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BugType_Bug", Storage="_BugType1", ThisKey="BUGTYPE", OtherKey="ID", IsForeignKey=true)]
+		public BugType BugType1
+		{
+			get
+			{
+				return this._BugType1.Entity;
+			}
+			set
+			{
+				BugType previousValue = this._BugType1.Entity;
+				if (((previousValue != value) 
+							|| (this._BugType1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BugType1.Entity = null;
+						previousValue.Bugs.Remove(this);
+					}
+					this._BugType1.Entity = value;
+					if ((value != null))
+					{
+						value.Bugs.Add(this);
+						this._BUGTYPE = value.ID;
+					}
+					else
+					{
+						this._BUGTYPE = default(int);
+					}
+					this.SendPropertyChanged("BugType1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+>>>>>>> c3c6d0f5fed55107351f6060295d3a8371668936
 }
 #pragma warning restore 1591
